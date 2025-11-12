@@ -5,6 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import authRoute from "./routes/auth.routes.js"
 import userRoute from "./routes/user.route.js"
+import postRoute from "./routes/post.routes.js"
 import cookieParser from "cookie-parser";
 import {v2 as cloudinary} from "cloudinary";
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,7 @@ cloudinary.config({
 
 app.use("/api/auth",authRoute);
 app.use("/api/users",userRoute);
+app.use("/api/post",postRoute);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{
     console.log(`Sever running on port ${PORT}`);
