@@ -3,9 +3,9 @@ import { connectDB } from "./db/db.js";
 import dotenv from "dotenv"
 import path from "path";
 import { fileURLToPath } from 'url';
-import authRoute from "./routes/auth.routes.js"
+import authRoute from "./routes/auth.route.js"
 import userRoute from "./routes/user.route.js"
-import postRoute from "./routes/post.routes.js"
+import postRoute from "./routes/post.route.js"
 import cookieParser from "cookie-parser";
 import {v2 as cloudinary} from "cloudinary";
 const __filename = fileURLToPath(import.meta.url);
